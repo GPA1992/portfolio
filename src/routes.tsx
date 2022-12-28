@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Main from './views/main';
-import Example from './views/example';
+import Main from './pages/main';
+import Example from './pages/example';
 import GlobalContextProvider from './contexts/GlobalContextProvider';
 
 export default function MainRoutes() {

@@ -1,9 +1,12 @@
 import React from 'react';
-
-import styles from './styles.module.scss';
+import NavBar from '../../components/header';
 
 function Main() {
-	return <div></div>;
+	return (
+		<div>
+			<NavBar />
+		</div>
+	);
 }
 
 export default Main;
