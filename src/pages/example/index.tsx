@@ -1,7 +1,7 @@
 import React from 'react';
-import Counter from '../../components/counter';
-import CounterWhitRedux from '../../components/counterWhitRedux';
-import GetPokemonWhitRedux from '../../components/getPokemonWhitRedux';
+import Counter from '../../components/example/counter';
+import CounterWhitRedux from '../../components/example/counterWhitRedux';
+import GetPokemonWhitRedux from '../../components/example/getPokemonWhitRedux';
 import styles from './styles.module.scss';
 
 function Main() {

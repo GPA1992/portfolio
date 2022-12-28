@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import useGlobalContext from '../../hooks/useGlobalContext';
+import useGlobalContext from '../../../hooks/useGlobalContext';
 
 export default function Counter() {
 	const { count, setCount } = useGlobalContext();
