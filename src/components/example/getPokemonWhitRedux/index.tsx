@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, pokemon } from '../../store/store';
-import { thunkGetPokemonByUsername } from '../../store/slices/getPokemon/thunks';
+import { AppDispatch, pokemon } from '../../../store/store';
+import { thunkGetPokemonByUsername } from '../../../store/slices/getPokemon/thunks';
 
 export default function GetPokemonWhitRedux() {
 	const [pokemonName, setPokemonName] = useState('');
