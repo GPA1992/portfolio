@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Main from './pages/main';
+import Main from './pages/main/main';
 import Example from './pages/example';
 import GlobalContextProvider from './contexts/GlobalContextProvider';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.sass';
+import './header.styles.sass';
 
 export default function NavBar() {
 	return (

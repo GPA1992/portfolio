@@ -1,10 +1,10 @@
 import React from 'react';
 import profilePicture from '../../../assets/profile.png';
-import './styles.sass';
+import './profilePicture.styles.sass';
 
 export default function ProfilePicture() {
 	return (
-		<div>
+		<div id="foto">
 			<img id="picture" src={profilePicture} alt="" />
 		</div>
 	);
