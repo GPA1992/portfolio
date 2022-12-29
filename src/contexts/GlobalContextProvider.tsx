@@ -10,7 +10,7 @@ export default function GlobalContextProvider(props: Props) {
 
 	return (
 		<GlobalContext.Provider value={valuesPRovider}>
-			s{props.children}
+			{props.children}
 		</GlobalContext.Provider>
 	);
 }
