@@ -13,28 +13,30 @@ export default function Comment() {
 		}
 		getVisitors();
 	}, []);
-
+	console.log(visitors);
+	const dateFormat = (dateStr: Date) => {
+		const year = String(dateStr).slice(0, 4);
+		const mont = String(dateStr).slice(4, 8);
+		const day = String(dateStr).slice(8, 10);
+		return `${day}${mont}${year}`;
+	};
 	return (
 		<div className="lastVisitors">
-			<div className="full-comment">
-				<div id="avtr-box">
-					<div id="div-avtr">
-						<img
-							id="avatar-picture"
-							src="https://classic.exame.com/wp-content/uploads/2021/04/Elon-Musk.jpg?quality=70&strip=info&w=1024"
-							alt=""
-						/>
+			{visitors.slice(-5).map((visitor) => (
+				<div key={visitor.id} className="full-comment">
+					<div id="avtr-box">
+						<div id="div-avtr">
+							<img id="avatar-picture" src={visitor.avatar} alt="" />
+						</div>
 					</div>
+					<div id="cmt-box">{visitor.comment}</div>
+					<div id="np-box">
+						<span id="n-box">{visitor.name}</span>/
+						<span id="p-box">{visitor.position}</span>
+					</div>
+					<div id="dt-box">{dateFormat(visitor.createdAt)}</div>
 				</div>
-				<div id="cmt-box">
-					<span>
-						Eu nunca vi portfólio tão incrivel assim, você deveria ser o novo
-						CEO do twitter!
-					</span>
-				</div>
-				<div id="np-box"></div>
-				<div id="dt-box"></div>
-			</div>
+			))}
 		</div>
 	);
 }

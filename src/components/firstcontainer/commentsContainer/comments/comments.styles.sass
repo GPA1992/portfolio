@@ -1,27 +1,35 @@
+@use '../../../../styles/variables'
+	
 .lastVisitors
+	border-radius: 15px
+	display: flex
+	flex-direction: column
+	justify-content: space-around
 	border: 1px solid black
-	background-color: purple
+	background-color: variables.$color-light-bg
 	padding: 20px
-	height: 80%
+	height: 60%
+
 
 .full-comment
+	border: 1px solid black
+	border-radius: 15px
+	background-color: variables.$color-black-bg
 	height: 18%
 	display: grid
-	background-color: grey
-	grid-template-columns: 3fr 5fr 2fr
-	grid-template-rows: 3fr 1fr
+	grid-template-columns: 2fr 6fr 2fr
+	grid-template-rows: 3fr 2fr
 	grid-template-areas: "avtr cmt cmt" "avtr np dt" 
 
 #avtr-box
 	display: flex
 	align-items: center
 	justify-content: center
-	background-color: red
 	grid-area: avtr
 
 #div-avtr
-	height: 120px
-	width: 120px
+	height: 70px
+	width: 70px
 	border-radius: 50%
 
 #avatar-picture
@@ -32,18 +40,48 @@
 	
 
 #cmt-box
-	background-color: green
+	display: flex
 	grid-area: cmt
-
+	justify-content: center
+	align-items: center
+	font-family: variables.$primary-font
+	font-weight: variables.$text-weight
+	color: variables.$color-white
+	text-align: justify
+	padding: 0px 10px 0px 0px
 
 #np-box
-	background-color: blue
+	display: flex
 	grid-area: np
-
+	justify-content: space-evenly
+	align-content: center
+	align-items: center
 	
+#n-box
+	font-family: variables.$primary-font
+	color: variables.$color-orange
+	font-size: 18px
+	font-weight: variables.$text-weight
+
+#p-box
+	font-family: variables.$primary-font
+	color: variables.$color-blue
+	font-size: 16px
+	font-weight: variables.$subtitle-weight
+
+
 #dt-box
-	background-color: yellow
+	display: flex
 	grid-area: dt
+	justify-content: flex-end
+	align-items: flex-end
+	font-family: variables.$data-font
+	font-size: 10px
+	color: variables.$color-white
+	font-weight: variables.$text-weight
+	text-align: justify
+	margin: 10px
+
 
 
 #comment-box

@@ -7,14 +7,14 @@ export default function NavBar() {
 			<span className="logo">{'</GPA>'}</span>
 			<nav id="navbar">
 				<span className="navbar" id="homeHeader">
-					home
+					Home
 				</span>
 				<span className="navbar" id="aboutHeader">
-					about
+					About
 				</span>
-				<span className="navbar">skills</span>
-				<span className="navbar">projects</span>
-				<span className="navbar">contact</span>
+				<span className="navbar">Skills</span>
+				<span className="navbar">Projects</span>
+				<span className="navbar">Contact</span>
 			</nav>
 		</header>
 	);

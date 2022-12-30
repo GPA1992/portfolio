@@ -1,11 +1,18 @@
 import React from 'react';
-import profilePicture from '../../../assets/profile.png';
+import profilePicture from '../../../assets/lensa/hs.jpg';
+import LightBg from '../../../assets/black-bg.png';
 import './profilePicture.styles.sass';
 
 export default function ProfilePicture() {
 	return (
 		<div id="foto">
-			<img id="picture" src={profilePicture} alt="" />
+			<div id="code-box">
+				<img id="code" src={LightBg} alt="background" />
+			</div>
+
+			<div id="profile-box">
+				<img id="profile-selfie" src={profilePicture} alt="profile" />
+			</div>
 		</div>
 	);
 }
