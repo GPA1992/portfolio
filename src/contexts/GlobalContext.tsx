@@ -6,7 +6,7 @@ type GlobalContextType = {
 	count: number;
 	setCount: Dispatch<SetStateAction<number>>;
 	visitors: Array<Visitor>;
-	setVisitors: Dispatch<SetStateAction<any>>;
+	setVisitors: Dispatch<SetStateAction<Array<never>>>;
 };
 
 const GlobalContext = createContext<GlobalContextType>({
