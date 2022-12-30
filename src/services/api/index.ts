@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-export default axios.create({
-	baseURL: process.env.REACT_APP_API_URL,
-	timeout: 10000,
-	headers: {
-		'Content-Type': 'application/json'
+export default async function fetchVisitors() {
+	try {
+		const response = await axios.get('http://15.228.60.254:3000/visitors');
+		return response.data;
+	} catch (error) {
+		console.log(error);
 	}
-});
+}

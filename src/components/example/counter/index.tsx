@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import './styles.sass';
 import useGlobalContext from '../../../hooks/useGlobalContext';
 
 export default function Counter() {
 	const { count, setCount } = useGlobalContext();
 	return (
-		<div className={styles.container}>
+		<div className="container">
 			<h1>Context API</h1>
 			<br />
 			<h1>{count}</h1>
