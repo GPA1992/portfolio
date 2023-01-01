@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import useGlobalContext from '../../../../hooks/useGlobalContext';
-import fetchVisitors from '../../../../services/api';
+import { fetchVisitors } from '../../../../services/api';
 import './comments.styles.sass';
 
 export default function Comment() {
@@ -13,7 +13,6 @@ export default function Comment() {
 		}
 		getVisitors();
 	}, []);
-	console.log(visitors);
 	const dateFormat = (dateStr: Date) => {
 		const year = String(dateStr).slice(0, 4);
 		const mont = String(dateStr).slice(4, 8);
