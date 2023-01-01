@@ -14,13 +14,13 @@
 
 
 .full-comment
+	display: grid
 	border: 1px solid black
 	border-radius: 15px
 	background-color: variables.$color-black-bg
 	height: 18%
-	display: grid
 	grid-template-columns: 2fr 6fr 2fr
-	grid-template-rows: 3fr 2fr
+	grid-template-rows: 4fr 2fr
 	grid-template-areas: "avtr cmt cmt" "avtr np dt" 
 
 #avtr-box
@@ -30,8 +30,8 @@
 	grid-area: avtr
 
 #div-avtr
-	height: 70px
-	width: 70px
+	height: 60px
+	width:60px
 	border-radius: 50%
 
 #avatar-picture
@@ -43,31 +43,42 @@
 
 #cmt-box
 	display: flex
-	margin: 10px 0px 0px 0px
+	margin: 5px 5px 0px 0px
 	grid-area: cmt
 	font-family: variables.$primary-font
 	font-weight: variables.$text-weight
+	font-size: variables.$comment-size
 	color: variables.$color-white
 	text-align: justify
-	padding: 0px 10px 0px 0px
+	padding: 5px
+	border-radius: 10px
+	background-color: variables.$color-light-bg
+
 
 #np-box
 	display: flex
 	grid-area: np
-	justify-content: space-evenly
-	align-content: center
-	align-items: center
+	justify-content: space-around
+	align-items: flex-end
+	font-family: variables.$data-font
+	font-size: 10px
+	color: variables.$color-white
+	font-weight: variables.$text-weight
+	text-align: justify
+	margin: 0px 0px 2px 0px
+
 	
 #n-box
 	font-family: variables.$primary-font
 	color: variables.$color-orange
-	font-size: 18px
+	font-size: variables.$comment-size
 	font-weight: variables.$text-weight
+	
 
 #p-box
 	font-family: variables.$primary-font
 	color: variables.$color-blue
-	font-size: 16px
+	font-size: variables.$comment-size
 	font-weight: variables.$subtitle-weight
 
 
@@ -81,7 +92,7 @@
 	color: variables.$color-white
 	font-weight: variables.$text-weight
 	text-align: justify
-	margin: 10px
+	margin: 0px 10px 2px 0px
 
 
 
