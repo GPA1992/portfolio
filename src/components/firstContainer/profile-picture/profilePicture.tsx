@@ -9,7 +9,6 @@ export default function ProfilePicture() {
 			<div id="code-box">
 				<img id="code" src={LightBg} alt="background" />
 			</div>
-
 			<div id="profile-box">
 				<img id="profile-selfie" src={profilePicture} alt="profile" />
 			</div>

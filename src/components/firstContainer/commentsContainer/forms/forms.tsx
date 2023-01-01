@@ -59,7 +59,7 @@ export default function forms() {
 					}
 					name="comment"
 					id="text-area"
-					maxLength={200}
+					maxLength={115}
 				></textarea>
 			</div>
 			<div id="name-form">

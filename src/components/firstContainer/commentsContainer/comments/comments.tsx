@@ -30,7 +30,7 @@ export default function Comment() {
 					</div>
 					<div id="cmt-box">{visitor.comment}</div>
 					<div id="np-box">
-						<span id="n-box">{visitor.name}</span>/
+						<span id="n-box">{visitor.name}</span>
 						<span id="p-box">{visitor.position}</span>
 					</div>
 					<div id="dt-box">{dateFormat(visitor.createdAt)}</div>
