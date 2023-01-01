@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './forms.styles.sass';
 import useGlobalContext from '../../../../hooks/useGlobalContext';
 import avatars from '../../../../data/avatarList';
@@ -17,6 +17,10 @@ export default function forms() {
 			avatar: avt,
 		} as VisitorToSend);
 	};
+
+	useEffect(() => {
+		randomAvatar();
+	}, []);
 
 	const getFormInfo = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = event.target;
