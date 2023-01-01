@@ -1,9 +1,18 @@
 import axios from 'axios';
+import { VisitorToSend } from '../../types/UserType';
 
-export default async function fetchVisitors() {
+export async function fetchVisitors() {
 	try {
 		const response = await axios.get('https://api.gpa-portfolio.com/visitors');
 		return response.data;
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+export async function sendPostRequest(newVisitor: VisitorToSend) {
+	try {
+		await axios.post('https://api.gpa-portfolio.com/visitors', newVisitor);
 	} catch (error) {
 		console.log(error);
 	}
