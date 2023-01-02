@@ -91,7 +91,12 @@ export default function forms() {
 				/>
 			</div>
 			<div id="submit">
-				<button id="submit-btn" type="submit" onClick={runForm}>
+				<button
+					id="submit-btn"
+					type="submit"
+					name="submit-button"
+					onClick={runForm}
+				>
 					Comentar
 				</button>
 			</div>
