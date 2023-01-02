@@ -12,7 +12,11 @@ export async function fetchVisitors() {
 
 export async function sendPostRequest(newVisitor: VisitorToSend) {
 	try {
-		await axios.post('https://api.gpa-portfolio.com/visitors', newVisitor);
+		await axios.post('https://api.gpa-portfolio.com/visitors', newVisitor, {
+			headers: {
+				'content-Type': 'application/json',
+			},
+		});
 	} catch (error) {
 		console.log(error);
 	}
