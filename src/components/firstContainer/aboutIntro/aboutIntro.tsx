@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.styles.sass';
-export default function About() {
+export default function AboutIntro() {
 	return (
 		<div id="about">
 			Desde pequeno, sempre fui apaixonado por tecnologia. Meu primeiro contato
@@ -14,7 +14,7 @@ export default function About() {
 			recomendavel clicar hehe).
 			<br />
 			<br />
-			<a id="know-more" href="">
+			<a id="know-more" href="/about">
 				clique aqui...
 			</a>
 		</div>

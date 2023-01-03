@@ -1,20 +1,27 @@
 import React from 'react';
+import { Navigate, redirect } from 'react-router-dom';
 import './header.styles.sass';
 
 export default function NavBar() {
+	function handleHomeClick() {
+		<Navigate to={'/'} />;
+	}
 	return (
 		<header className="header">
 			<span className="logo">{'</GPA>'}</span>
 			<nav id="navbar">
-				<span className="navbar" id="homeHeader">
+				<a className="navbar" id="homeHeader" href="/">
 					Home
-				</span>
-				<span className="navbar" id="aboutHeader">
+				</a>
+				<a className="navbar" id="aboutHeader" href="/about">
 					About
-				</span>
-				<span className="navbar">Skills</span>
-				<span className="navbar">Projects</span>
-				<span className="navbar">Contact</span>
+				</a>
+				<a href="/projects" className="navbar">
+					Projects
+				</a>
+				<a href="/contact" className="navbar">
+					Contact
+				</a>
 			</nav>
 		</header>
 	);

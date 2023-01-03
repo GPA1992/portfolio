@@ -60,7 +60,7 @@ export default function HardSkills() {
 					com todos os projetos que fiz e o link do repositório de cada um
 					deles.
 				</p>
-				<a id="projects-link" href="">
+				<a id="projects-link" href="/projects">
 					Meus projetos...
 				</a>
 			</div>
