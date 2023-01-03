@@ -6,10 +6,10 @@ export default function HardSkills() {
 	return (
 		<div id="hard-skills">
 			<div id="skills-title">
-				<p>Hard Skills</p>
+				<p>{'Hard Skills() {'}</p>
 			</div>
 			<div id="skills-subtitle">
-				<p>Tecnologias que Conheço</p>
+				<p>{'/Tecnologias que Conheço'}</p>
 			</div>
 			<StackIcons />
 			<div id="about-skills">
@@ -17,7 +17,7 @@ export default function HardSkills() {
 					Durante o curso da Trybe até o momento passei por três módulos, onde
 					em cada um deles eu tive contato com essas tecnologias.
 				</p>
-				<p className="modulos">Fundamentos</p>
+				<p className="modulos">{'<Fundamentos />'}</p>
 				<div id="fundamentos-text">
 					<p>
 						Nesse bloco tive contato com as ferramentas essenciais para quem
@@ -28,7 +28,7 @@ export default function HardSkills() {
 						<span id="text-jest">{' jest'}</span>.
 					</p>
 				</div>
-				<p className="modulos">Front-End</p>
+				<p className="modulos">{'<Front-End />'}</p>
 				<div id="front-end-text">
 					<p>
 						No módulo de front-end, aprendi sobre o{' '}
@@ -40,7 +40,7 @@ export default function HardSkills() {
 						e React Hooks, para tornar a utilização do React mais eficiente.
 					</p>
 				</div>
-				<p className="modulos">Back-End</p>
+				<p className="modulos">{'<Back-End />'}</p>
 				<div id="back-end-text">
 					<p>
 						No back-end, aprendi sobre o <span id="text-docker">Docker</span> e
@@ -52,7 +52,7 @@ export default function HardSkills() {
 						conceito de cada uma.
 					</p>
 				</div>
-				<p id="projects">Meus Projetos</p>
+				<p id="projects">{'/Meus Projetos'}</p>
 				<p id="about-projects">
 					Até agora, completei 27 projetos do curso da Trybe, além de alguns
 					outros que fiz para meu estudo pessoal. Para ter uma melhor noção de
@@ -60,9 +60,12 @@ export default function HardSkills() {
 					com todos os projetos que fiz e o link do repositório de cada um
 					deles.
 				</p>
-				<a id="projects-link" href="">
+				<a id="projects-link" href="/projects">
 					Meus projetos...
 				</a>
+			</div>
+			<div id="skills-title-end">
+				<p>{'}'}</p>
 			</div>
 		</div>
 	);

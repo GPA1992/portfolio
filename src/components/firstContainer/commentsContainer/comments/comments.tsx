@@ -27,13 +27,19 @@ export default function Comment() {
 						<div id="div-avtr">
 							<img id="avatar-picture" src={visitor.avatar} alt="" />
 						</div>
+						<div id="p-box">
+							<p>{visitor.position}</p>
+						</div>
 					</div>
-					<div id="cmt-box">{visitor.comment}</div>
-					<div id="np-box">
-						<span id="n-box">{visitor.name}</span>
-						<span id="p-box">{visitor.position}</span>
+					<div id="cmt-box">
+						<div id="nd-box">
+							<p id="n-box">{visitor.name}</p>
+							<p id="dt-box">{dateFormat(visitor.createdAt)}</p>
+						</div>
+						<div>
+							<p id="text-comment">{visitor.comment}</p>
+						</div>
 					</div>
-					<div id="dt-box">{dateFormat(visitor.createdAt)}</div>
 				</div>
 			))}
 		</div>
