@@ -6,6 +6,7 @@ import {
 	SiJest,
 	SiSequelize,
 	SiExpress,
+	SiTestinglibrary,
 } from 'react-icons/si';
 import {
 	FaHtml5,
@@ -50,6 +51,10 @@ export default function StackIcons() {
 				<div className="icon" id="redux-icon">
 					<SiRedux />
 					<span>Redux</span>
+				</div>
+				<div className="icon" id="testing-library-icon">
+					<SiTestinglibrary />
+					<span>Testing Library</span>
 				</div>
 				<div className="icon" id="git-icon">
 					<FaGitAlt />
