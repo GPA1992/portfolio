@@ -9,8 +9,9 @@ export default function About() {
 			foi inesquecível. Eu sabia que um dia trabalharia com tecnologia assim que
 			vi o personagem se mexer de acordo com meus comandos. Hoje sou estudante
 			de desenvolvimento na Trybe, quase formado. Antes disso, tive muitas
-			experiências e aprendizados. Para saber mais sobre minha história e
-			carreira...
+			experiências profissionais e aprendizados. Para saber mais sobre minha
+			história e carreira profissional (Se você for um recrutador, é altamente
+			recomendavel clicar hehe).
 			<br />
 			<br />
 			<a id="know-more" href="">
