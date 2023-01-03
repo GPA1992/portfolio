@@ -1,11 +1,7 @@
 import React from 'react';
-import { Navigate, redirect } from 'react-router-dom';
 import './header.styles.sass';
 
 export default function NavBar() {
-	function handleHomeClick() {
-		<Navigate to={'/'} />;
-	}
 	return (
 		<header className="header">
 			<span className="logo">{'</GPA>'}</span>
