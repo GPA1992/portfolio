@@ -12,7 +12,7 @@ export default function Comment() {
 			setVisitors(await result);
 		}
 		getVisitors();
-	}, []);
+	}, [visitors]);
 	const dateFormat = (dateStr: Date) => {
 		const year = String(dateStr).slice(0, 4);
 		const mont = String(dateStr).slice(4, 8);
@@ -36,8 +36,8 @@ export default function Comment() {
 							<p id="n-box">{visitor.name}</p>
 							<p id="dt-box">{dateFormat(visitor.createdAt)}</p>
 						</div>
-						<div>
-							<p id="text-comment">{visitor.comment}</p>
+						<div id="text-comment">
+							<p>{visitor.comment}</p>
 						</div>
 					</div>
 				</div>
