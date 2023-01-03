@@ -37,11 +37,13 @@ export default function forms() {
 		} as VisitorToSend);
 	};
 
-	const runForm = async () => {
+	const runForm = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
 		await sendPostRequest(fullComment);
 	};
+
 	return (
-		<form id="form-box">
+		<form onSubmit={runForm} id="form-box">
 			<div id="avatar-form">
 				<div id="set-avatar">
 					<img id="random-avatar" src={avatar} alt="" />
@@ -91,12 +93,7 @@ export default function forms() {
 				/>
 			</div>
 			<div id="submit">
-				<button
-					id="submit-btn"
-					type="submit"
-					name="submit-button"
-					onClick={runForm}
-				>
+				<button id="submit-btn" type="submit" name="submit-button">
 					Comentar
 				</button>
 			</div>
