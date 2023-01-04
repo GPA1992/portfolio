@@ -12,6 +12,7 @@ export default function useGlobalContextProvider() {
 		comment: '',
 		avatar: '',
 	});
+	const [validateForm, setValidateForm] = useState(true);
 	return {
 		count,
 		setCount,
@@ -21,5 +22,7 @@ export default function useGlobalContextProvider() {
 		setAvatar,
 		fullComment,
 		setFullComment,
+		validateForm,
+		setValidateForm,
 	};
 }

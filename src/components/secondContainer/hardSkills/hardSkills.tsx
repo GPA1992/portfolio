@@ -4,7 +4,7 @@ import StackIcons from './stackIcons/stackIcons';
 
 export default function HardSkills() {
 	return (
-		<div id="hard-skills">
+		<article id="hard-skills">
 			<div id="skills-title">
 				<p>{'Hard Skills() {'}</p>
 			</div>
@@ -67,6 +67,6 @@ export default function HardSkills() {
 			<div id="skills-title-end">
 				<p>{'}'}</p>
 			</div>
-		</div>
+		</article>
 	);
 }

@@ -20,7 +20,7 @@ export default function Comment() {
 		return `${day}${mont}${year}`;
 	};
 	return (
-		<div className="lastVisitors">
+		<div className="last-visitors">
 			{visitors.slice(-5).map((visitor) => (
 				<div key={visitor.id} className="full-comment">
 					<div id="avtr-box">

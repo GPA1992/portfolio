@@ -4,8 +4,8 @@ import './secondContainer.styles.sass';
 
 export default function SecondContainer() {
 	return (
-		<div id="second-container">
+		<section id="second-container">
 			<HardSkills />
-		</div>
+		</section>
 	);
 }
