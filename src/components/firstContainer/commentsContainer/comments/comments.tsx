@@ -37,7 +37,7 @@ export default function Comment() {
 							<p id="dt-box">{dateFormat(visitor.createdAt)}</p>
 						</div>
 						<div id="text-comment">
-							<p>{visitor.comment}</p>
+							<span>{visitor.comment}</span>
 						</div>
 					</div>
 				</div>
