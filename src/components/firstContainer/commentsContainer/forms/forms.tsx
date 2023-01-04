@@ -126,12 +126,6 @@ export default function forms() {
 				/>
 			</div>
 			<div id="submit">
-				{!validateForm && (
-					<div>
-						<span id="symbol">*</span>
-						<span id="warning"> Preencha todos os campos</span>
-					</div>
-				)}
 				<button
 					disabled={!validateForm}
 					id="submit-btn"
@@ -140,6 +134,14 @@ export default function forms() {
 				>
 					Comentar
 				</button>
+				{!validateForm && (
+					<div id="warning">
+						<p>
+							<span id="symbol">*</span>
+							<span> Preencha todos os campos</span>
+						</p>
+					</div>
+				)}
 			</div>
 		</form>
 	);
