@@ -5,7 +5,7 @@ import './commentsContainer.styles.sass';
 
 export default function Comments() {
 	return (
-		<div id="comments">
+		<aside id="comments">
 			<div id="title-text">
 				<span id="comments-title">Ultimos Visitantes</span>
 				<span id="comment-text">
@@ -16,6 +16,6 @@ export default function Comments() {
 			</div>
 			<Comment />
 			<Form />
-		</div>
+		</aside>
 	);
 }

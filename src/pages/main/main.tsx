@@ -6,11 +6,11 @@ import './main.styles.sass';
 
 function Main() {
 	return (
-		<div className="main">
+		<main className="main">
 			<NavBar />
 			<FirstContainer />
 			<SecondContainer />
-		</div>
+		</main>
 	);
 }
 

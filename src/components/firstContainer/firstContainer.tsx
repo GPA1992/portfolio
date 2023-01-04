@@ -7,11 +7,11 @@ import './firstContainer.styles.sass';
 
 export default function FirstContainer() {
 	return (
-		<div className="firstContainer">
+		<section id="first-container">
 			<ProfilePicture />
 			<Info />
 			<About />
 			<Comments />
-		</div>
+		</section>
 	);
 }

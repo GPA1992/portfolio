@@ -6,7 +6,14 @@ import { VisitorToSend } from '../../../../types/UserType';
 import { sendPostRequest } from '../../../../services/api/index';
 
 export default function forms() {
-	const { avatar, setAvatar, fullComment, setFullComment } = useGlobalContext();
+	const {
+		avatar,
+		setAvatar,
+		fullComment,
+		setFullComment,
+		validateForm,
+		setValidateForm,
+	} = useGlobalContext();
 
 	const randomAvatar = () => {
 		const anyAvatar = avatars[Math.floor(Math.random() * avatars.length)];
@@ -20,26 +27,49 @@ export default function forms() {
 
 	useEffect(() => {
 		randomAvatar();
+		formVerify();
 	}, []);
 
 	const getFormInfo = (event: React.ChangeEvent<HTMLInputElement>) => {
+		event.preventDefault();
 		const { name, value } = event.target;
 		setFullComment({ ...fullComment, [name]: value } as VisitorToSend);
+		formVerify();
 	};
 
 	const getFormInfoTextArea = (
 		event: React.ChangeEvent<HTMLTextAreaElement>
 	) => {
+		event.preventDefault();
 		const { name, value } = event.target;
 		setFullComment({
 			...fullComment,
 			[name]: value,
 		} as VisitorToSend);
+		formVerify();
+	};
+
+	const formVerify = () => {
+		const { name, position, comment } = fullComment;
+		const errors = [!name.length, !position.length, !comment.length];
+		const runErrors = errors.some((erro) => erro === true);
+		setValidateForm(!runErrors);
+	};
+
+	const clearForm = () => {
+		setFullComment({
+			name: '',
+			position: '',
+			comment: '',
+			avatar,
+		} as VisitorToSend);
+		setValidateForm(false);
 	};
 
 	const runForm = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		await sendPostRequest(fullComment);
+		clearForm();
 	};
 
 	return (
@@ -66,6 +96,7 @@ export default function forms() {
 					name="comment"
 					id="text-area"
 					maxLength={115}
+					value={fullComment.comment}
 				></textarea>
 			</div>
 			<div id="name-form">
@@ -77,6 +108,7 @@ export default function forms() {
 					name="name"
 					id="name-input"
 					type="text"
+					value={fullComment.name}
 					maxLength={25}
 				/>
 			</div>
@@ -89,11 +121,23 @@ export default function forms() {
 					name="position"
 					id="position-input"
 					type="text"
+					value={fullComment.position}
 					maxLength={25}
 				/>
 			</div>
 			<div id="submit">
-				<button id="submit-btn" type="submit" name="submit-button">
+				{!validateForm && (
+					<div>
+						<span id="symbol">*</span>
+						<span id="warning"> Preencha todos os campos</span>
+					</div>
+				)}
+				<button
+					disabled={!validateForm}
+					id="submit-btn"
+					type="submit"
+					name="submit-button"
+				>
 					Comentar
 				</button>
 			</div>

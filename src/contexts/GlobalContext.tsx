@@ -11,6 +11,8 @@ type GlobalContextType = {
 	setAvatar: Dispatch<SetStateAction<string>>;
 	fullComment: VisitorToSend;
 	setFullComment: Dispatch<SetStateAction<VisitorToSend>>;
+	validateForm: boolean;
+	setValidateForm: Dispatch<SetStateAction<boolean>>;
 };
 
 const GlobalContext = createContext<GlobalContextType>({
@@ -22,6 +24,8 @@ const GlobalContext = createContext<GlobalContextType>({
 	setAvatar: () => {},
 	fullComment: { name: '', position: '', comment: '', avatar: '' },
 	setFullComment: () => {},
+	validateForm: false,
+	setValidateForm: () => {},
 });
 
 export default GlobalContext;

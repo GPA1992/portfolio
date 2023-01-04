@@ -2,7 +2,7 @@ import React from 'react';
 import './about.styles.sass';
 export default function AboutIntro() {
 	return (
-		<div id="about">
+		<article id="about">
 			Desde pequeno, sempre fui apaixonado por tecnologia. Meu primeiro contato
 			foi com videogames, quando vi meu primo jogando no Phantom System (um
 			clone do Nintendo dos anos 90). Circus Charlie com aquela tela colorida
@@ -17,6 +17,6 @@ export default function AboutIntro() {
 			<a id="know-more" href="/about">
 				clique aqui...
 			</a>
-		</div>
+		</article>
 	);
 }
