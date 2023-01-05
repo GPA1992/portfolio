@@ -24,3 +24,17 @@ export type EventTarget = {
 	value: string;
 	src: string;
 };
+
+type PropTitle = {
+	title: string;
+};
+
+type PropSubtitle = {
+	subtitle: string;
+};
+
+type PropSingleIcon = {
+	icon: React.ReactElement;
+	iconId: string;
+	name: string;
+};

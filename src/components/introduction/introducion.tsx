@@ -1,9 +1,9 @@
 import React from 'react';
 import ProfilePicture from './profile-picture/profilePicture';
-import Comments from './commentsContainer/commentsContainer';
+import Comments from './comments-container/commentsContainer';
 import Info from './info/info';
-import About from './aboutIntro/aboutIntro';
-import './firstContainer.styles.sass';
+import About from './about-Intro/aboutIntro';
+import './introducion.styles.sass';
 
 export default function FirstContainer() {
 	return (

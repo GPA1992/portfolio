@@ -14,10 +14,10 @@ const pokemonSlice = createSlice({
 	reducers: {
 		getPokemon: (state, action: PayloadAction<Sprites>) => {
 			state.pokemonSprites = action.payload;
-		}
+		},
 	},
-	extraReducers: builder => {
-		builder.addCase(thunkGetPokemonByUsername.pending, state => {
+	extraReducers: (builder) => {
+		builder.addCase(thunkGetPokemonByUsername.pending, (state) => {
 			state.loading = true;
 		});
 		builder.addCase(
@@ -25,7 +25,8 @@ const pokemonSlice = createSlice({
 			(state, action: PayloadAction<Sprites>) => {
 				state.loading = false;
 				state.pokemonSprites = action.payload;
-			}	);
+			}
+		);
 	},
 });
 
