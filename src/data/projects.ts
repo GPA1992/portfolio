@@ -19,6 +19,10 @@ const projects = {
 		'O projeto JS Unit Testes foi uma aplicação desenvolvida em JavaScript com o objetivo de criar testes unitários para funções JavaScript usando o jest. Os testes unitários são uma técnica importante na programação para garantir que cada parte de um aplicativo esteja funcionando corretamente e para identificar problemas no código de maneira rápida. O projeto JS Unit Testes permitiu que as funções JavaScript fossem testadas de forma eficiente e eficaz, garantindo a qualidade do código.',
 	zooFunctions:
 		'O projeto Zoo Functions foi o projeto de fechamento do bloco de fundamentos curso da Trybe. Ele foi considerado o teste mais desafiador e proporcionou muito aprendizado para mim. Durante esse projeto, eu criei várias funções usando High Order Functions em JavaScript e também realizei testes unitários com jest para manipular um array de objetos complexos que representavam informações de um zoológico. Entre todas as funções, a getAnimalMap foi a mais desafiadora e a mais satisfatória de resolver. O projeto Zoo Functions foi uma ótima oportunidade para praticar minhas habilidades de programação e aplicar os conceitos aprendidos durante o curso.',
+	gorjetaApp:
+		'O projeto "App de Gorjetas" é uma aplicação mobile criada com React Native, Expo CLI e Styled Components. Ele foi desenvolvido para ajudar as pessoas a calcular quanto de gorjeta devem dar ao garçom em um restaurante. A aplicação permite que o usuário insira o valor total da conta e defina uma porcentagem de gorjeta. Além disso, também é possível inserir quantas pessoas vão pagar a conta. Com essas informações, o aplicativo calcula automaticamente o valor da gorjeta e exibe o resultado para o usuário.',
+	reactTsBoilerplate:
+		'O projeto "React TS Boilerplate" é uma aplicação em React que fornece um ambiente pré-configurado para o desenvolvimento de aplicações. Ele inclui configurações prontas para o Redux, Context API e testes, permitindo que o usuário comece a codar imediatamente sem precisar se preocupar com a configuração inicial.',
 };
 
 export default projects;
