@@ -7,7 +7,7 @@ export default function Info() {
 	return (
 		<div id="info">
 			<Title title={'Gabriel Proença de Araujo'} />
-			<Subtitle subtitle={'Full Stack Developer Student'} />
+			<Subtitle subtitle={'Developer Engineer'} />
 			<span id="resume">
 				Estudante de desenvolvimento na Trybe, buscando uma oportunidade no
 				mercado DEV
