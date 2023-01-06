@@ -4,6 +4,7 @@ import './myProjects.styles.sass';
 import Fundamentals from './fundamentals/fundamentals';
 import FrontEnd from './front-end/frontEnd';
 import BackEnd from './back-end/backEnd';
+import PersonalProjects from './personal-projects/personalProjects';
 
 export default function MyProjects() {
 	return (
@@ -21,6 +22,7 @@ export default function MyProjects() {
 			<Fundamentals />
 			<FrontEnd />
 			<BackEnd />
+			<PersonalProjects />
 			<br />
 			<div id="skills-title-end-projects">
 				<p>{'}'}</p>
