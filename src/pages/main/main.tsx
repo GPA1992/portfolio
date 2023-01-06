@@ -1,6 +1,6 @@
 import React from 'react';
-import FirstContainer from '../../components/introduction/introducion';
 import NavBar from '../../components/header/header';
+import Introduction from '../../components/introduction/introducion';
 import SecondContainer from '../../components/skills/skills';
 import './main.styles.sass';
 
@@ -9,7 +9,7 @@ function Main() {
 		<div>
 			<NavBar />
 			<main className="main">
-				<FirstContainer />
+				<Introduction />
 				<SecondContainer />
 			</main>
 		</div>
