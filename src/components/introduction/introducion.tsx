@@ -5,7 +5,7 @@ import Info from './info/info';
 import About from './about-Intro/aboutIntro';
 import './introducion.styles.sass';
 
-export default function FirstContainer() {
+export default function Introduction() {
 	return (
 		<section id="first-container">
 			<ProfilePicture />
