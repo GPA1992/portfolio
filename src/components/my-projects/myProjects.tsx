@@ -1,10 +1,27 @@
 import React from 'react';
 import Icons from '../generic-components/icons/icons';
-import Subtitle from '../generic-components/subtitle/subtitle';
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaJsSquare } from 'react-icons/fa';
+import {
+	FaCss3Alt,
+	FaGitAlt,
+	FaHtml5,
+	FaJsSquare,
+	FaNodeJs,
+	FaReact,
+} from 'react-icons/fa';
 import Title from '../generic-components/title/title';
 import './myProjects.styles.sass';
 import ProjectDescription from './project-description/projectDescription';
+import projects from '../../data/projects';
+import {
+	SiDocker,
+	SiExpress,
+	SiJest,
+	SiRedux,
+	SiTestinglibrary,
+	SiTypescript,
+} from 'react-icons/si';
+import { GiHook } from 'react-icons/gi';
+import { DiMysql } from 'react-icons/di';
 
 export default function MyProjects() {
 	return (
@@ -20,12 +37,7 @@ export default function MyProjects() {
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="O projeto Lessons Learned foi um projeto que utilizei as linguagens HTML,
-							CSS, Git e GitHub. O objetivo do projeto era criar uma página web simples.
-							Para isso, usei o HTML para estruturar o conteúdo da página e o CSS para dar
-							estilo e formatação. O Git foi utilizado para controlar as alterações no
-							código e o GitHub foi utilizado como plataforma para armazenar e
-							compartilhar o projeto com outras pessoas."
+							description={projects.lessonsLearned}
 							projectLink="https://github.com/GPA1992/lessons-learned-trybe"
 							projectName="Lessons Learned"
 						/>
@@ -39,10 +51,7 @@ export default function MyProjects() {
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="Pixel Art é uma aplicação web que permite ao usuário criar desenhos 
-							pixelados através de uma grade de pixels. O usuário pode escolher a cor de cada
-							pixel individualmente e criar seus próprios desenhos.
-							A aplicação foi criada usando HTML, CSS e JavaScript e foi desenvolvida durante o curso da Trybe."
+							description={projects.playgroundFunction}
 							projectLink="https://github.com/GPA1992/playground-functions-trybe"
 							projectName="Playground Functions"
 						/>
@@ -77,7 +86,7 @@ export default function MyProjects() {
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="a"
+							description={projects.misteryLetter}
 							projectLink="https://github.com/GPA1992/mistery-letter-trybe"
 							projectName="Mistery Letter"
 						/>
@@ -93,7 +102,7 @@ export default function MyProjects() {
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="a"
+							description={projects.colorGuess}
 							projectLink="https://github.com/GPA1992/color-guess-trybe"
 							projectName="Color Guess"
 						/>
@@ -109,7 +118,7 @@ export default function MyProjects() {
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="a"
+							description={projects.todoList}
 							projectLink="https://github.com/GPA1992/todo-list-trybe"
 							projectName="Todo List"
 						/>
@@ -125,7 +134,7 @@ export default function MyProjects() {
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="a"
+							description={projects.memeGenerator}
 							projectLink="https://github.com/GPA1992/meme-generator-trybe"
 							projectName="Meme Generator"
 						/>
@@ -141,7 +150,7 @@ export default function MyProjects() {
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="a"
+							description={projects.trybeWarts}
 							projectLink="https://github.com/GPA1992/trybewarts-trybe"
 							projectName="Trybewarts"
 						/>
@@ -151,35 +160,353 @@ export default function MyProjects() {
 					<details>
 						<summary id="summary-subtitle">{'../JS Unit Test'}</summary>
 						<div className="project-icons">
-							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
-							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
 							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
 							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
 						</div>
 						<ProjectDescription
-							description="a"
+							description={projects.jsUnitTests}
 							projectLink="https://github.com/GPA1992/js-unit-tests-trybe"
 							projectName="JS Unit Test"
 						/>
 					</details>
 				</div>
-				<Subtitle subtitle="../Zoo Function" />
-				<Subtitle subtitle="../Shopping Cart" />
-				<Subtitle subtitle="../Solar System" />
-				<Subtitle subtitle="../Tryunfo" />
-				<Subtitle subtitle="../Trybetune" />
-				<Subtitle subtitle="../Online Store" />
-				<Subtitle subtitle="../React Testing Library" />
-				<Subtitle subtitle="../Trybewallet" />
-				<Subtitle subtitle="../Trivia Redux" />
-				<Subtitle subtitle="../Star Wars" />
-				<Subtitle subtitle="../Recipes App" />
-				<Subtitle subtitle="../Docker Todo List" />
-				<Subtitle subtitle="../MySql All For One" />
-				<Subtitle subtitle="../MySql One For All" />
-				<Subtitle subtitle="../Talker Manager" />
-				<Subtitle subtitle="../Store Manager" />
-				<Subtitle subtitle="../Blogs Api" />
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Zoo Function'}</summary>
+						<div className="project-icons">
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description={projects.zooFunctions}
+							projectLink="https://github.com/GPA1992/zoo-functions-trybe"
+							projectName="Zoo Function"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Shopping Cart'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/shopping-cart-trybe"
+							projectName="Shopping Cart"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Solar System'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/solar-system-trybe"
+							projectName="Solar System"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Tryunfo'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/tryunfo-trybe"
+							projectName="Tryunfo"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Trybetunes'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/trybetunes-trybe"
+							projectName="Trybetunes"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Online Store'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/online-store-trybe"
+							projectName="Online Store"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">
+							{'../React Testing Library'}
+						</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
+							<Icons
+								name="RTL"
+								iconId="testing-library-icon"
+								icon={<SiTestinglibrary />}
+							/>
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/react-testing-library-trybe"
+							projectName="React Testing Library"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Trybewallet'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="Redux" iconId="redux-icon" icon={<SiRedux />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
+							<Icons
+								name="RTL"
+								iconId="testing-library-icon"
+								icon={<SiTestinglibrary />}
+							/>
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/trybewallet-trybe"
+							projectName="Trybewallet"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Trivia Redux'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="Redux" iconId="redux-icon" icon={<SiRedux />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
+							<Icons
+								name="RTL"
+								iconId="testing-library-icon"
+								icon={<SiTestinglibrary />}
+							/>
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/trivia-redux-trybe"
+							projectName="Trivia Redux"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Star Wars'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="React Hooks" iconId="redux-icon" icon={<GiHook />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
+							<Icons
+								name="RTL"
+								iconId="testing-library-icon"
+								icon={<SiTestinglibrary />}
+							/>
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/star-wars-planets-trybe"
+							projectName="Star Wars"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Recipes App'}</summary>
+						<div className="project-icons">
+							<Icons name="HTML" iconId="html-icon" icon={<FaHtml5 />} />
+							<Icons name="CSS" iconId="css-icon" icon={<FaCss3Alt />} />
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="React" iconId="react-icon" icon={<FaReact />} />
+							<Icons name="React Hooks" iconId="redux-icon" icon={<GiHook />} />
+							<Icons name="Jest" iconId="jest-icon" icon={<SiJest />} />
+							<Icons
+								name="RTL"
+								iconId="testing-library-icon"
+								icon={<SiTestinglibrary />}
+							/>
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/app-receitas-trybe"
+							projectName="Recipes App"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Docker Todo List'}</summary>
+						<div className="project-icons">
+							<Icons name="Docker" iconId="docker-icon" icon={<SiDocker />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/docker-todo-list-trybe"
+							projectName="Docker Todo List"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../MySql All For One'}</summary>
+						<div className="project-icons">
+							<Icons name="MySql" iconId="mysql-icon" icon={<DiMysql />} />
+							<Icons name="Docker" iconId="docker-icon" icon={<SiDocker />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/mysql-all-for-one-trybe"
+							projectName="MySql All For One"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../MySql One For All'}</summary>
+						<div className="project-icons">
+							<Icons name="MySql" iconId="mysql-icon" icon={<DiMysql />} />
+							<Icons name="Docker" iconId="docker-icon" icon={<SiDocker />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/mysql-one-for-all-trybe"
+							projectName="MySql One For All"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Talker Manager'}</summary>
+						<div className="project-icons">
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="NodeJs" iconId="node-icon" icon={<FaNodeJs />} />
+							<Icons
+								name="Express"
+								iconId="express-icon"
+								icon={<SiExpress />}
+							/>
+							<Icons name="MySql" iconId="mysql-icon" icon={<DiMysql />} />
+							<Icons name="Docker" iconId="docker-icon" icon={<SiDocker />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/talker-manager-trybe"
+							projectName="Talker Manager"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Store Manager'}</summary>
+						<div className="project-icons">
+							<Icons name="JavaScript" iconId="js-icon" icon={<FaJsSquare />} />
+							<Icons name="NodeJs" iconId="node-icon" icon={<FaNodeJs />} />
+							<Icons
+								name="Express"
+								iconId="express-icon"
+								icon={<SiExpress />}
+							/>
+							<Icons name="MySql" iconId="mysql-icon" icon={<DiMysql />} />
+							<Icons name="Docker" iconId="docker-icon" icon={<SiDocker />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/store-manager-trybe"
+							projectName="Store Manager"
+						/>
+					</details>
+				</div>
+				<div className="project-details">
+					<details>
+						<summary id="summary-subtitle">{'../Blogs Api'}</summary>
+						<div className="project-icons">
+							<Icons
+								name="TypeScript"
+								iconId="ts-icon"
+								icon={<SiTypescript />}
+							/>
+							<Icons name="NodeJs" iconId="node-icon" icon={<FaNodeJs />} />
+							<Icons
+								name="Express"
+								iconId="express-icon"
+								icon={<SiExpress />}
+							/>
+							<Icons name="MySql" iconId="mysql-icon" icon={<DiMysql />} />
+							<Icons name="Docker" iconId="docker-icon" icon={<SiDocker />} />
+							<Icons name="GIT/GitHub" iconId="git-icon" icon={<FaGitAlt />} />
+						</div>
+						<ProjectDescription
+							description="fazer"
+							projectLink="https://github.com/GPA1992/blogs-api-trybe"
+							projectName="Blogs Api"
+						/>
+					</details>
+				</div>
+				<br />
 				<div id="skills-title-end">
 					<p>{'}'}</p>
 				</div>
