@@ -3,7 +3,6 @@ import Icons from '../../generic-components/icons/icons';
 import { FaGitAlt, FaJsSquare, FaNodeJs, FaRocket } from 'react-icons/fa';
 import './backEnd.styles.sass';
 import ProjectDescription from './../project-description/projectDescription';
-import projects from '../../../data/projects';
 import { SiDocker, SiExpress, SiTypescript } from 'react-icons/si';
 import { DiMysql } from 'react-icons/di';
 
