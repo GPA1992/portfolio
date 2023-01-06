@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './forms.styles.sass';
 import useGlobalContext from '../../../../hooks/useGlobalContext';
 import avatars from '../../../../data/avatarList';
-import { VisitorToSend } from '../../../../types/UserType';
+import { VisitorToSend } from '../../../../types/Types';
 import { sendPostRequest } from '../../../../services/api/index';
 
 export default function forms() {

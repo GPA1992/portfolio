@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { VisitorToSend } from '../../types/UserType';
+import { VisitorToSend } from '../../types/Types';
 
 const expirationDate = new Date();
 expirationDate.setDate(expirationDate.getDate() + 7);

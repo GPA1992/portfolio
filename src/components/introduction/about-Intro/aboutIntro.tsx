@@ -14,9 +14,9 @@ export default function AboutIntro() {
 			recomendavel clicar hehe).
 			<br />
 			<br />
-			<a id="know-more" href="/about">
-				clique aqui...
-			</a>
+			<div id="projects-link">
+				<a href="/projects">{'clique aqui:~$ cd /Sobre Mim'}</a>
+			</div>
 		</article>
 	);
 }

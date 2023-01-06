@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { Visitor, VisitorToSend } from '../types/UserType';
+import { Visitor, VisitorToSend } from '../types/Types';
 import { createContext, Dispatch, SetStateAction } from 'react';
 
 type GlobalContextType = {

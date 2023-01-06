@@ -1,16 +1,18 @@
 import React from 'react';
-import FirstContainer from '../../components/firstContainer/firstContainer';
+import FirstContainer from '../../components/introduction/introducion';
 import NavBar from '../../components/header/header';
-import SecondContainer from '../../components/secondContainer/secondContainer';
+import SecondContainer from '../../components/skills/skills';
 import './main.styles.sass';
 
 function Main() {
 	return (
-		<main className="main">
+		<div>
 			<NavBar />
-			<FirstContainer />
-			<SecondContainer />
-		</main>
+			<main className="main">
+				<FirstContainer />
+				<SecondContainer />
+			</main>
+		</div>
 	);
 }
 
